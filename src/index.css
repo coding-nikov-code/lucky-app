@@ -1,0 +1,53 @@
+/* ===========================
+   Lucky App – Global Styles
+   =========================== */
+
+:root {
+  --clr-surface: rgba(0, 0, 0, 0.45);
+  --clr-surface-solid: rgba(10, 10, 10, 0.7);
+  --clr-gold: #f5c842;
+  --clr-orange: #e8732a;
+  --clr-text: #fff;
+  --clr-text-muted: rgba(255, 255, 255, 0.6);
+  --clr-border: rgba(255, 255, 255, 0.15);
+  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --radius: 14px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--clr-text);
+  min-height: 100svh;
+  -webkit-font-smoothing: antialiased;
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80") center / cover no-repeat fixed;
+}
+
+/* Dunkles Overlay über dem Foto für Lesbarkeit */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  display: flex;
+}

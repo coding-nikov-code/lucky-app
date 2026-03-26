@@ -1,0 +1,137 @@
+/* ===========================
+   Lucky App – Component Styles
+   =========================== */
+
+/* --- Layout --- */
+.app {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+}
+
+.app-main {
+  width: 100%;
+}
+
+/* --- Shuffle Button --- */
+.shuffle-btn {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto 40px;
+  padding: 22px 44px;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffd700;
+  background: transparent;
+  border: 2px solid rgba(245, 200, 66, 0.4);
+  text-shadow:
+    0 0 10px rgba(255, 215, 0, 0.4),
+    0 0 20px rgba(218, 165, 32, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.6);
+  border-radius: var(--radius);
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.3);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.shuffle-btn:hover {
+  border-color: rgba(255, 215, 0, 0.7);
+  background: rgba(255, 215, 0, 0.06);
+  color: #ffe44d;
+  text-shadow:
+    0 0 14px rgba(255, 215, 0, 0.5),
+    0 0 28px rgba(218, 165, 32, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.6);
+  box-shadow:
+    0 6px 30px rgba(255, 215, 0, 0.2),
+    0 20px 50px rgba(0, 0, 0, 0.35);
+  transform: translateY(-4px);
+}
+
+.shuffle-btn:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Player --- */
+.player-wrapper {
+  background: var(--clr-surface-solid);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.player-title {
+  padding: 16px 20px 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffd700;
+  text-shadow:
+    0 0 8px rgba(255, 215, 0, 0.3),
+    0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.player-wrapper iframe {
+  display: block;
+  border: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+/* --- Placeholder --- */
+.player-placeholder {
+  text-align: center;
+  padding: 64px 24px;
+  border: 2px dashed var(--clr-border);
+  border-radius: var(--radius);
+  color: var(--clr-text-muted);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* --- Footer --- */
+.app-footer {
+  margin-top: auto;
+  padding-top: 48px;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 215, 0, 0.5);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  .app {
+    padding: 32px 16px;
+  }
+
+  .shuffle-btn {
+    max-width: 100%;
+    font-size: 1.2rem;
+    padding: 18px 32px;
+  }
+}
