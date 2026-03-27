@@ -24,6 +24,11 @@ const shows = [
     title: "Lucky Nikov – 07.05.25",
     url: "https://soundcloud.com/callshopradio/lucky-nikow-070525",
   },
+  {
+    id: 4,
+    title: "Lucky Show w/ Mischa Nikov – 02.04.25",
+    url: "https://soundcloud.com/callshopradio/lucky-show-w-mischa-nikov-020425",
+  },
 ];
 
 export default shows;
