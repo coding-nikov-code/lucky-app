@@ -20,7 +20,7 @@ function Player({ trackUrl, title }) {
       <iframe
         title={title}
         width="100%"
-        height="300"
+        height="100%"
         scrolling="no"
         frameBorder="no"
         allow="autoplay"

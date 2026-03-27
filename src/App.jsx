@@ -5,7 +5,7 @@ import "./App.css";
 
 /**
  * App – Hauptkomponente der Lucky App.
- * Zeigt den Shuffle-Button und den SoundCloud Player.
+ * Zeigt den SoundCloud Player oben und den Shuffle-Button unten.
  */
 function App() {
   const { currentShow, shuffle } = useRandomShow();
@@ -13,16 +13,12 @@ function App() {
   return (
     <div className="app">
       <main className="app-main">
-        <ShuffleButton onClick={shuffle} />
-
         {currentShow && (
           <Player trackUrl={currentShow.url} title={currentShow.title} />
         )}
-      </main>
 
-      <footer className="app-footer">
-        <p>Lucky App &copy; {new Date().getFullYear()}</p>
-      </footer>
+        <ShuffleButton onClick={shuffle} />
+      </main>
     </div>
   );
 }
